@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 270 91% 65%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 262 83% 58%;
+    --radius: 0.5rem;
+    
+    /* Custom dark purple theme */
+    --dark-purple: 240 15% 9%;
+    --dark-purple-light: 240 10% 15%;
+    --purple-primary: 262 83% 58%;
+    --purple-accent: 270 91% 65%;
+    --purple-muted: 260 20% 25%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-[#0F0F23] text-foreground font-sans;
+
+    background: linear-gradient(135deg, #0F0F23 0%, #1A1B3A 100%);
+    min-height: 100vh;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply backdrop-blur-sm bg-white/5 border border-white/10;
+  }
+  
+  .purple-gradient {
+    background: linear-gradient(135deg, #6B46C1 0%, #A855F7 100%);
+  }
+  
+  .email-card {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 hover:bg-white/10 transition-all duration-200 cursor-pointer;
+  }
+  
+  .dropdown-content {
+    @apply bg-[#1A1B3A] border border-purple-500/20 rounded-lg shadow-2xl backdrop-blur-sm;
+  }
+}
